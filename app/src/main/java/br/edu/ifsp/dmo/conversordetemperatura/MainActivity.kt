@@ -14,22 +14,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         initializeSpinners()
-
     }
 
     private fun initializeSpinners() {
-        val spinner = binding.spinnerTypeTemperature
-        val spinner2 = binding.spinnerTargetTemperature
+        val spinnerInitialTemperature = binding.spinnerTypeTemperature
+        val spinnerTargetTemperature = binding.spinnerTargetTemperature
+        val dataset: Array<String> = arrayOf("Kelvin", "Celsius", "Fahrenheit")
 
-        spinner.adapter = ArrayAdapter.createFromResource(
-            this,
-            R.array.temperature_units,
-            android.R.layout.simple_spinner_item
-        )
-        spinner2.adapter = ArrayAdapter.createFromResource(
-            this,
-            R.array.temperature_units,
-            android.R.layout.simple_spinner_item
-        )
+        spinnerInitialTemperature.adapter = SpinnerItemAdapter(this, dataset)
+        spinnerTargetTemperature.adapter = SpinnerItemAdapter(this, dataset)
     }
 }
