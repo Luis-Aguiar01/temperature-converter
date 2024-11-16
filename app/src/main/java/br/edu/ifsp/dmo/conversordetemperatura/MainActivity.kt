@@ -1,20 +1,35 @@
 package br.edu.ifsp.dmo.conversordetemperatura
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import br.edu.ifsp.dmo.conversordetemperatura.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        initializeSpinners()
+
+    }
+
+    private fun initializeSpinners() {
+        val spinner = binding.spinnerTypeTemperature
+        val spinner2 = binding.spinnerTargetTemperature
+
+        spinner.adapter = ArrayAdapter.createFromResource(
+            this,
+            R.array.temperature_units,
+            android.R.layout.simple_spinner_item
+        )
+        spinner2.adapter = ArrayAdapter.createFromResource(
+            this,
+            R.array.temperature_units,
+            android.R.layout.simple_spinner_item
+        )
     }
 }
