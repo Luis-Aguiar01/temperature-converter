@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     android:padding="10dp"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
     <ImageView
         android:id="@+id/image_title"
@@ -18,7 +18,7 @@
         android:src="@drawable/ic_thermometer"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="#3FFF00" />
+        app:tint="@color/primary_color" />
 
     <TextView
         android:id="@+id/text_title"
@@ -39,21 +39,19 @@
 
     <Spinner
         android:id="@+id/spinner_initial_temperature"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="@+id/input_temperature"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toEndOf="@id/input_temperature"
         app:layout_constraintTop_toTopOf="@id/input_temperature" />
 
     <TextView
         android:id="@+id/initial_temperature_title"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:text="@string/insert_temp_title"
         android:textAlignment="center"
         android:textAllCaps="true"
@@ -62,30 +60,28 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/image_title"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
         app:layout_constraintWidth_percent="0.8" />
 
     <EditText
         android:id="@+id/input_temperature"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="32dp"
         android:hint="@string/edit_text_hint"
         android:inputType="numberDecimal"
+        android:paddingHorizontal="15dp"
         android:textAlignment="center"
         android:textColorHint="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@id/spinner_initial_temperature"
-        app:layout_constraintHorizontal_weight="1.3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/initial_temperature_title" />
 
     <TextView
         android:id="@+id/textView_target_temperature"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:text="@string/target_unit_text"
         android:textAlignment="center"
         android:textAllCaps="true"
@@ -94,8 +90,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/input_temperature"
-        app:layout_constraintWidth_percent="0.7" />
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
     <Spinner
         android:id="@+id/spinner_target_temperature"
@@ -124,7 +119,7 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#1F75FE"
+        android:backgroundTint="@color/button_color"
         android:paddingVertical="15dp"
         android:text="@string/button_text"
         android:textAlignment="center"
@@ -135,6 +130,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/temperature_result"/>
+        app:layout_constraintTop_toBottomOf="@id/temperature_result" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.24760602" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.500684" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

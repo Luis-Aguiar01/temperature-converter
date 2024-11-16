@@ -1,4 +1,4 @@
-package br.edu.ifsp.dmo.conversordetemperatura
+package br.edu.ifsp.dmo.conversordetemperatura.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
+import br.edu.ifsp.dmo.conversordetemperatura.R
 
 class SpinnerItemAdapter(context: Context, dataset: Array<String>):
     ArrayAdapter<String>(context, R.layout.temperature_unit_spinner_item, dataset) {

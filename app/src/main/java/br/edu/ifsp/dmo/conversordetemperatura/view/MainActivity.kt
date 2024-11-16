@@ -1,8 +1,8 @@
-package br.edu.ifsp.dmo.conversordetemperatura
+package br.edu.ifsp.dmo.conversordetemperatura.view
 
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
+import br.edu.ifsp.dmo.conversordetemperatura.adapters.SpinnerItemAdapter
 import br.edu.ifsp.dmo.conversordetemperatura.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
