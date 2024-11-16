@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initializeSpinners() {
-        val spinnerInitialTemperature = binding.spinnerTypeTemperature
+        val spinnerInitialTemperature = binding.spinnerInitialTemperature
         val spinnerTargetTemperature = binding.spinnerTargetTemperature
         val dataset: Array<String> = arrayOf("Celsius", "Kelvin", "Fahrenheit")
 

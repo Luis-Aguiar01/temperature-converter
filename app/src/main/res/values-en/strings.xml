@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Temperature Converter</string>
+    <string name="app_title">Temperature Converter</string>
+    <string name="insert_temp_title">Initial Temperature</string>
+    <string name="edit_text_hint">Temperature:</string>
+    <string name="target_unit_text">Target Unit</string>
+    <string name="button_text">Convert</string>
+</resources>

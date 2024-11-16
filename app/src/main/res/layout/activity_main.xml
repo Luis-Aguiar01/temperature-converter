@@ -85,7 +85,7 @@
         android:id="@+id/textView_target_temperature"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="50dp"
         android:text="@string/target_unit_text"
         android:textAlignment="center"
         android:textAllCaps="true"
@@ -124,7 +124,6 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
         android:backgroundTint="#1F75FE"
         android:paddingVertical="15dp"
         android:text="@string/button_text"
@@ -136,6 +135,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spinner_target_temperature" />
+        app:layout_constraintTop_toBottomOf="@id/temperature_result"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
