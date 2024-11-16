@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Conversor De Temperatura</string>
+    <string name="app_title">Conversor De Temperatura</string>
+    <string name="insert_temp_title">Temperatura Inicial</string>
+    <string name="edit_text_hint">Temperatura:</string>
+    <string name="target_unit_text">Unidade Alvo</string>
+    <string name="button_text">Converter</string>
 </resources>
