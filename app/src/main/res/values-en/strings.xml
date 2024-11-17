@@ -6,4 +6,6 @@
     <string name="edit_text_hint">Temperature:</string>
     <string name="target_unit_text">Target Unit</string>
     <string name="button_text">Convert</string>
+    <string name="temperature_conversion_error">Conversion Error.</string>
+    <string name="invalid_scale_error">Invalid Scale.</string>
 </resources>

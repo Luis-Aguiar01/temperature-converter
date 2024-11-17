@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Conversor De Temperatura</string>
     <string name="app_title">Conversor De Temperatura</string>
@@ -5,4 +6,6 @@
     <string name="edit_text_hint">Temperatura:</string>
     <string name="target_unit_text">Unidade Alvo</string>
     <string name="button_text">Converter</string>
+    <string name="temperature_conversion_error">Erro de Conversão.</string>
+    <string name="invalid_scale_error">Escala Inválida.</string>
 </resources>
