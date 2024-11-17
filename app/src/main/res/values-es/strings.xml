@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Convertidor de Temperatura</string>
+    <string name="app_title">Convertidor de Temperatura</string>
+    <string name="insert_temp_title">Temperatura Inicial</string>
+    <string name="edit_text_hint">Temperatura:</string>
+    <string name="target_unit_text">Unidad Objetivo</string>
+    <string name="button_text">Convertir</string>
+    <string name="temperature_conversion_error">Error de Conversión.</string>
+    <string name="invalid_scale_error">Escala Inválida.</string>
+</resources>

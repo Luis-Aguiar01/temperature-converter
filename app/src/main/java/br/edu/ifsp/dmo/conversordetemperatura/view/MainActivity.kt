@@ -5,6 +5,7 @@ import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import br.edu.ifsp.dmo.conversordetemperatura.R
 import br.edu.ifsp.dmo.conversordetemperatura.adapters.SpinnerItemAdapter
 import br.edu.ifsp.dmo.conversordetemperatura.databinding.ActivityMainBinding
 import br.edu.ifsp.dmo.conversordetemperatura.model.CelsiusStrategy
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        
+
         initializeSpinners()
         setOnClickListener()
     }
@@ -63,14 +64,14 @@ class MainActivity : AppCompatActivity() {
             "celsius" -> temperature + 273.15
             "fahrenheit" -> (temperature - 32) * 5 / 9 + 273.15
             "kelvin" -> temperature
-            else -> throw IllegalArgumentException()
+            else -> throw IllegalArgumentException(getString(R.string.invalid_scale_error))
         }
     }
 
     private fun readTemperature() = try {
         binding.inputTemperature.text.toString().toDouble()
     } catch (e: NumberFormatException) {
-        throw NumberFormatException()
+        throw NumberFormatException(getString(R.string.temperature_conversion_error))
     }
 
     private fun setStrategy(targetScale: String) {
