@@ -76,9 +76,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun setStrategy(targetScale: String) {
         when (targetScale.lowercase()) {
-            "celsius" -> strategy = CelsiusStrategy()
-            "fahrenheit" -> strategy = FahrenheitStrategy()
-            "kelvin" -> strategy = KelvinStrategy()
+            "celsius" -> strategy = CelsiusStrategy
+            "fahrenheit" -> strategy = FahrenheitStrategy
+            "kelvin" -> strategy = KelvinStrategy
         }
     }
 
